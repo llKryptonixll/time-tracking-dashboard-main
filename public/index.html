@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body class="font-rubik text-white">
+  <main class="min-h-screen bg-very_dark_blue grid place-items-center pl-8 pr-8 pt-16 pb-16">
+    <section class="lg:flex lg:gap-0 gap-8 grid min-h-[500px] max-w-[1100px] w-full lg:space-x-8">
+      <div class="grid bg-dark_blue rounded-main min-w-[250px]">
+        <div class="bg-blue rounded-main p-main sm:grid lg:gap-0 gap-4 flex justify-between sm:space-x-0 space-x-4 items-center">
+          <img class="w-[80px] border-2 border-white rounded-full" src="images/image-jeremy.png" alt="jeremy-robson-profile-image">
+          <header>
+            <p class="text-pale_Blue">Report for</p>
+            <h1 class="sm:text-4xl text-xl sm:max-w-[200px]">Jeremy Robson</h1>
+          </header>
+        </div>
+        <div class="bg-dark_blue rounded-b-main p-main sm:grid flex sm:space-x-0 space-x-4 justify-between sm:justify-items-start">
+          <button class="text-desaturated_blue switch-tab-btn hover:text-white transition-colors">Daily</button>
+          <button class="text-desaturated_blue switch-tab-btn hover:text-white transition-colors">Weekly</button>
+          <button class="text-desaturated_blue switch-tab-btn hover:text-white transition-colors">Monthly</button>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 w-full">
+        <div id="Work" class="cards bg-light_red rounded-main grid grid-rows-[20%,82%] sm:h-auto h-[160px]">
+          <div class="bg-light_red overflow-hidden rounded-t-main flex justify-end items-center pr-[15px]">
+            <img class="mt-[5px]" src="images/icon-work.svg" alt="work-icon">
+          </div>
+          <div class="bg-dark_blue p-main rounded-main grid items-center hover:bg-[#43477D] transition-colors cursor-pointer">
+            <div class="flex justify-between">
+              <p>Work</p>
+              <button class="group" aria-label="open-modal">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path class="group-hover:fill-white transition-colors" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+            <div class="sm:block flex items-center justify-between">
+              <p class="sm:text-5xl text-3xl spent-hours"></p>
+              <p class="text-pale_Blue"></p>
+            </div>
+          </div>
+        </div>
+        <div id="Play" class="cards bg-soft_blue rounded-main grid grid-rows-[20%,82%] sm:h-auto h-[160px]">
+          <div class="bg-soft_blue overflow-hidden rounded-t-main flex justify-end items-center pr-[15px]">
+            <img class="mt-[25px]" src="images/icon-play.svg" alt="play-icon-play-icon">
+          </div>
+          <div class="bg-dark_blue p-main rounded-main grid items-center hover:bg-[#43477D] transition-colors cursor-pointer">
+            <div class="flex justify-between">
+              <p>Play</p>
+              <button class="group" aria-label="open-modal">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path class="group-hover:fill-white transition-colors" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+            <div class="sm:block flex items-center justify-between">
+              <p class="sm:text-5xl text-3xl spent-hours"></p>
+              <p class="text-pale_Blue"></p>
+            </div>
+          </div>
+        </div>
+        <div id="Study" class="cards bg-light_red_2 rounded-main grid grid-rows-[20%,82%] sm:h-auto h-[160px]">
+          <div class="bg-light_red_2 overflow-hidden rounded-t-main flex justify-end pr-[15px] items-center">
+            <img class="mt-[20px]" src="images/icon-study.svg" alt="stuicon-study-icon">
+          </div>
+          <div class="bg-dark_blue p-main rounded-main grid items-center hover:bg-[#43477D] transition-colors cursor-pointer">
+            <div class="flex justify-between">
+              <p>Study</p>
+              <button class="group" aria-label="open-modal">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path class="group-hover:fill-white transition-colors" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+            <div class="sm:block flex items-center justify-between">
+              <p class="sm:text-5xl text-3xl spent-hours"></p>
+              <p class="text-pale_Blue"></p>
+            </div>
+          </div>
+        </div>
+        <div id="Exercise" class="cards bg-lime_green rounded-main grid grid-rows-[20%,82%] sm:h-auto h-[160px]">
+          <div class="bg-lime_green overflow-hidden rounded-t-main flex justify-end pr-[15px] items-center">
+            <img class="mt-[10px]" src="images/icon-exercise.svg" alt="exicon-exercise-icon">
+          </div>
+          <div class="bg-dark_blue p-main rounded-main grid items-center hover:bg-[#43477D] transition-colors cursor-pointer">
+            <div class="flex justify-between">
+              <p>Exercise</p>
+              <button class="group" aria-label="open-modal">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path class="group-hover:fill-white transition-colors" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+            <div class="sm:block flex items-center justify-between">
+              <p class="sm:text-5xl text-3xl spent-hours"></p>
+              <p class="text-pale_Blue"></p>
+            </div>
+          </div>
+        </div>
+        <div id="Social" class="cards bg-violet rounded-main grid grid-rows-[20%,82%] sm:h-auto h-[160px]">
+          <div class="bg-violet overflow-hidden rounded-t-main flex justify-end pr-[15px] items-center">
+            <img class="mt-[30px]" src="images/icon-social.svg" alt="social-icon">
+          </div>
+          <div class="bg-dark_blue p-main rounded-main grid items-center hover:bg-[#43477D] transition-colors cursor-pointer">
+            <div class="flex justify-between">
+              <p>Social</p>
+              <button class="group" aria-label="open-modal">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path class="group-hover:fill-white transition-colors" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+            <div class="sm:block flex items-center justify-between">
+              <p class="sm:text-5xl text-3xl spent-hours"></p>
+              <p class="text-pale_Blue"></p>
+            </div>
+          </div>
+        </div>
+        <div id="Self Care" class="cards bg-soft_orange rounded-main grid grid-rows-[20%,82%] sm:h-auto h-[160px]">
+          <div class="bg-soft_orange overflow-hidden rounded-t-main flex justify-end pr-[15px] items-center">
+            <img class="mt-[10px]" src="images/icon-self-care.svg" alt="self-care-icon">
+          </div>
+          <div class="bg-dark_blue p-main rounded-main grid items-center hover:bg-[#43477D] transition-colors cursor-pointer">
+            <div class="flex justify-between">
+              <p>Self Care</p>
+              <button class="group" aria-label="open-modal">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path class="group-hover:fill-white transition-colors" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+            <div class="sm:block flex items-center justify-between">
+              <p class="sm:text-5xl text-3xl spent-hours"></p>
+              <p class="text-pale_Blue"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
