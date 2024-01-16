@@ -14,7 +14,7 @@ async function renderData(btn) {
     cards.forEach((card) => {
         const currentHours = card.childNodes[3].childNodes[3].childNodes[1];
         const lastHours = card.childNodes[3].childNodes[3].childNodes[3];
-        const rightCard = data.find(element => element.title === card.getAttribute('id'));
+        const rightCard = data.find(element => element.title === card.getAttribute('id').replace("-", " "));
 
         switch (btn.innerText || "Weekly") {
             case "Daily":
